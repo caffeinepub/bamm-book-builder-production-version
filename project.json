@@ -1,0 +1,22 @@
+{
+  "overview": "Bamm Book Builder is a children's book creation platform that produces print-ready PDFs for Amazon KDP and IngramSpark. Users create and edit books with pages, images, and text, then export KDP-compliant interior and full-wrap cover PDFs for self-publishing.",
+  "features": [
+    "Create and manage children's book projects",
+    "Page-by-page editor with image uploads and text",
+    "KDP-compliant interior PDF export (8.75x8.75\" with full-bleed)",
+    "Full-wrap cover PDF export with dynamic spine width calculation",
+    "Subscription gating via Stripe billing integration",
+    "AI illustration prompt suggestions",
+    "Internet Identity authentication"
+  ],
+  "category": "publishing-tools",
+  "tags": [
+    "children-s-books",
+    "kdp",
+    "ingramspark",
+    "pdf-export",
+    "self-publishing",
+    "book-builder"
+  ],
+  "last_updated": "2026-04-08T03:51:13.659Z"
+}

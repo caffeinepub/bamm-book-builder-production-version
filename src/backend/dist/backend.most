@@ -1,0 +1,226 @@
+// Version: 3.0.0
+type BleedSpec__1036135261 =
+  {bottom : Float; left : Float; right : Float; top : Float};
+type BleedSpec__183316547 =
+  {bottom : Float; left : Float; right : Float; top : Float};
+type CoverElement__1043211167 =
+  {imageUrl : ?Text; layout : Layout__362390048; text : Text};
+type CoverElement__788480843 =
+  {imageUrl : ?Text; layout : Layout__245289127; text : Text};
+type CoverSpec__1047835111 =
+  {
+    back : CoverElement__1043211167;
+    bleed : BleedSpec__183316547;
+    dimensions : Dimensions__740955976;
+    front : CoverElement__1043211167;
+    spine : SpineSpec__587292091
+  };
+type CoverSpec__884261286 =
+  {
+    back : CoverElement__788480843;
+    bleed : BleedSpec__1036135261;
+    dimensions : Dimensions__194315986;
+    front : CoverElement__788480843;
+    spine : SpineSpec__688538313
+  };
+type Data__791452850<K, V> =
+  {var count : Nat__490723111; kvs : [var ?(K, V)]};
+type Dimensions__194315986 = {height : Float; width : Float};
+type Dimensions__740955976 = {height : Float; width : Float};
+type FileReference__486842902 = {hash : Text; path : Text};
+type ImagePosition__18173555 =
+  {height : Float; width : Float; x : Float; y : Float};
+type ImagePosition__208785025 =
+  {height : Float; width : Float; x : Float; y : Float};
+type Image__1025948569 =
+  {
+    dpi : Float;
+    id : Text;
+    owner : Principal;
+    pageId : ?Text;
+    path : Text;
+    projectId : Text;
+    uploaded : Int
+  };
+type Image__1042730026 =
+  {
+    dpi : Float;
+    id : Text;
+    owner : Principal;
+    pageId : ?Text;
+    path : Text;
+    projectId : Text;
+    uploaded : Int
+  };
+type Internal__8484328<K, V> =
+  {children : [var ?Node__46230540<K, V>]; data : Data__791452850<K, V>};
+type KDPValidation__323387757 =
+  {
+    bleed : BleedSpec__1036135261;
+    errors : [Text];
+    isValid : Bool;
+    margin : MarginSpec__740650817;
+    spineWidth : Float;
+    trimSize : Dimensions__194315986;
+    warnings : [Text]
+  };
+type KDPValidation__854914843 =
+  {
+    bleed : BleedSpec__183316547;
+    errors : [Text];
+    isValid : Bool;
+    margin : MarginSpec__540043323;
+    spineWidth : Float;
+    trimSize : Dimensions__740955976;
+    warnings : [Text]
+  };
+type Layout__245289127 =
+  {position : Position__975282988; size : Size__145091245};
+type Layout__362390048 =
+  {position : Position__128887991; size : Size__428150171};
+type Leaf__809889148<K, V> = {data : Data__791452850<K, V>};
+type Map__158565046<K, V> = Map__297112838<K, V>;
+type Map__297112838<K, V> =
+  {var root : Node__46230540<K, V>; var size : Nat__490723111};
+type Map__334413012<K, V> = {root : Tree__4145630<K, V>; size : Nat};
+type Map__605269027<K, V> = Map__158565046<K, V>;
+type MarginSpec__540043323 =
+  {bottom : Float; left : Float; right : Float; top : Float};
+type MarginSpec__740650817 =
+  {bottom : Float; left : Float; right : Float; top : Float};
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Node__46230540<K, V> =
+  {#internal : Internal__8484328<K, V>; #leaf : Leaf__809889148<K, V>};
+type OldAccessControlState__633397628 =
+  {
+    var adminAssigned : Bool;
+    var userRoles : Map__334413012<Principal, UserRole__403611420>
+  };
+type PageLayout__17581409 =
+  {
+    imagePosition : ImagePosition__208785025;
+    textPosition : TextPosition__30157833
+  };
+type PageLayout__381377753 =
+  {
+    imagePosition : ImagePosition__18173555;
+    textPosition : TextPosition__275043184
+  };
+type Page__325916721 =
+  {
+    imageUrl : ?Text;
+    layout : PageLayout__17581409;
+    pageNumber : Nat;
+    text : Text
+  };
+type Page__810863137 =
+  {
+    imageUrl : ?Text;
+    layout : PageLayout__381377753;
+    pageNumber : Nat;
+    text : Text
+  };
+type Position__128887991 = {x : Float; y : Float};
+type Position__975282988 = {x : Float; y : Float};
+type ProjectSettings__1027275058 =
+  {font : Text; fontSize : Float; lineSpacing : Float; margin : Float};
+type ProjectSettings__66214 =
+  {font : Text; fontSize : Float; lineSpacing : Float; margin : Float};
+type Project__433138880 =
+  {
+    cover : CoverSpec__884261286;
+    createdAt : Int;
+    id : Text;
+    kdpValidation : KDPValidation__323387757;
+    owner : Principal;
+    pages : [Page__325916721];
+    settings : ProjectSettings__1027275058;
+    story : Text;
+    title : Text;
+    updatedAt : Int
+  };
+type Project__762223144 =
+  {
+    cover : CoverSpec__1047835111;
+    createdAt : Int;
+    id : Text;
+    kdpValidation : KDPValidation__854914843;
+    owner : Principal;
+    pages : [Page__810863137];
+    settings : ProjectSettings__66214;
+    story : Text;
+    title : Text;
+    updatedAt : Int
+  };
+type Size__145091245 = {height : Float; width : Float};
+type Size__428150171 = {height : Float; width : Float};
+type SpineSpec__587292091 = {text : Text; width : Float};
+type SpineSpec__688538313 = {text : Text; width : Float};
+type SubscriptionRecord__132754268 =
+  {isActive : Bool; principal : Principal; updatedAt : Int};
+type TextPosition__275043184 =
+  {height : Float; width : Float; x : Float; y : Float};
+type TextPosition__30157833 =
+  {height : Float; width : Float; x : Float; y : Float};
+type Tree__4145630<K, V> =
+  {
+    #black : (Tree__4145630<K, V>, K, V, Tree__4145630<K, V>);
+    #leaf;
+    #red : (Tree__4145630<K, V>, K, V, Tree__4145630<K, V>)
+  };
+type UserProfile__315128327 = {name : Text};
+type UserProfile__491224006 = {name : Text};
+type UserRole__1054455867 = {#admin; #guest; #user};
+type UserRole__403611420 = {#admin; #guest; #user};
+actor ({
+  in accessControlState : OldAccessControlState__633397628;
+  in var fileOwnership : Map__334413012<Text, Principal>;
+  in var images : Map__334413012<Text, Image__1025948569>;
+  in var nextProjectId : Nat;
+  in var projectOwners : Map__334413012<Text, Principal>;
+  in var projects : Map__334413012<Text, Project__433138880>;
+  in registry :
+    {
+      var authorizedPrincipals : [Principal];
+      var blobsToRemove : Map__334413012<Text, Bool>;
+      var references : Map__334413012<Text, FileReference__486842902>
+    };
+  stable var subscriptions :
+    {
+      var root : Node__46230540<Principal, SubscriptionRecord__132754268>;
+      var size : Nat__490723111
+    };
+  in var userProfiles : Map__334413012<Principal, UserProfile__315128327>
+}, {
+  stable accessControlState :
+    {
+      var adminAssigned : Bool;
+      userRoles : Map__605269027<Principal, UserRole__1054455867>
+    };
+  stable var fileOwnership :
+    {var root : Node__46230540<Text, Principal>; var size : Nat__490723111};
+  stable var images :
+    {
+      var root : Node__46230540<Text, Image__1042730026>;
+      var size : Nat__490723111
+    };
+  stable var nextProjectId : Nat;
+  stable var projectOwners :
+    {var root : Node__46230540<Text, Principal>; var size : Nat__490723111};
+  stable var projects :
+    {
+      var root : Node__46230540<Text, Project__762223144>;
+      var size : Nat__490723111
+    };
+  stable var subscriptions :
+    {
+      var root : Node__46230540<Principal, SubscriptionRecord__132754268>;
+      var size : Nat__490723111
+    };
+  stable var userProfiles :
+    {
+      var root : Node__46230540<Principal, UserProfile__491224006>;
+      var size : Nat__490723111
+    }
+}) ;
